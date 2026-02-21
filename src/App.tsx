@@ -1,14 +1,14 @@
 import { useEffect, useState, useRef } from "react";
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
-  GraduationCap, 
-  Heart, 
-  Users, 
-  BookOpen, 
-  Award, 
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  GraduationCap,
+  Heart,
+  Users,
+  BookOpen,
+  Award,
   Menu,
   X,
   ChevronRight,
@@ -16,7 +16,7 @@ import {
   CheckCircle,
   Calendar,
   ArrowRight,
-  Feather
+  Feather,
 } from "lucide-react";
 import { cn } from "./utils/cn";
 
@@ -64,23 +64,27 @@ function App() {
     {
       icon: Heart,
       title: "Kindness at Core",
-      description: "We nurture empathy, compassion, and strong moral values in every child."
+      description:
+        "We nurture empathy, compassion, and strong moral values in every child.",
     },
     {
       icon: Feather,
       title: "Feathers to Fly",
-      description: "Building confidence, independence, and self-belief for a bright future."
+      description:
+        "Building confidence, independence, and self-belief for a bright future.",
     },
     {
       icon: Users,
       title: "Individual Attention",
-      description: "Every child is known, valued, and supported as a unique individual."
+      description:
+        "Every child is known, valued, and supported as a unique individual.",
     },
     {
       icon: BookOpen,
       title: "21st Century Skills",
-      description: "Communication, collaboration, creativity, and critical thinking."
-    }
+      description:
+        "Communication, collaboration, creativity, and critical thinking.",
+    },
   ];
 
   const facilities = [
@@ -89,25 +93,28 @@ function App() {
     "Well-ventilated classrooms and good campus space",
     "Focus on discipline, routine, and student safety",
     "Activity-based learning and student participation",
-    "Regular assessments and academic tracking"
+    "Regular assessments and academic tracking",
   ];
 
   const testimonials = [
     {
       name: "Mrs. Sharma",
       role: "Parent of Class 5 Student",
-      quote: "Aviz Convent has transformed my daughter. She has become more confident and expressive. The teachers truly care about each child's growth."
+      quote:
+        "Aviz Convent has transformed my daughter. She has become more confident and expressive. The teachers truly care about each child's growth.",
     },
     {
       name: "Mr. Khan",
       role: "Parent of Class 3 Student",
-      quote: "The school's focus on values alongside academics is commendable. My son looks forward to going to school every single day."
+      quote:
+        "The school's focus on values alongside academics is commendable. My son looks forward to going to school every single day.",
     },
     {
       name: "Mrs. Gupta",
       role: "Parent of Playgroup Student",
-      quote: "A safe, nurturing environment where my little one feels at home. The personal attention given to each child is remarkable."
-    }
+      quote:
+        "A safe, nurturing environment where my little one feels at home. The personal attention given to each child is remarkable.",
+    },
   ];
 
   const hours = [
@@ -117,7 +124,7 @@ function App() {
     { day: "Thursday", time: "7:30 am – 1:10 pm" },
     { day: "Friday", time: "7:30 am – 1:10 pm" },
     { day: "Saturday", time: "7:30 am – 1:10 pm" },
-    { day: "Sunday", time: "Closed" }
+    { day: "Sunday", time: "Closed" },
   ];
 
   return (
@@ -129,11 +136,15 @@ function App() {
             {/* Logo */}
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center overflow-hidden border-2 border-amber-200">
-               <img src="/public/logo.png" alt="logo.png" />
+                <img src="/logo.png" alt="logo.png" />
               </div>
               <div className="hidden sm:block">
-                <h1 className="text-lg lg:text-xl font-bold text-slate-800 leading-tight">Aviz Convent School</h1>
-                <p className="text-xs text-slate-500">Comprehensive English Education</p>
+                <h1 className="text-lg lg:text-xl font-bold text-slate-800 leading-tight">
+                  Aviz Convent School
+                </h1>
+                <p className="text-xs text-slate-500">
+                  Comprehensive English Education
+                </p>
               </div>
             </div>
 
@@ -145,14 +156,16 @@ function App() {
                 { id: "philosophy", label: "Philosophy" },
                 { id: "facilities", label: "Facilities" },
                 { id: "admissions", label: "Admissions" },
-                { id: "contact", label: "Contact" }
+                { id: "contact", label: "Contact" },
               ].map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
                   className={cn(
                     "text-sm font-medium transition-colors hover:text-amber-600",
-                    activeSection === item.id ? "text-amber-600" : "text-slate-600"
+                    activeSection === item.id
+                      ? "text-amber-600"
+                      : "text-slate-600",
                   )}
                 >
                   {item.label}
@@ -175,7 +188,11 @@ function App() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="lg:hidden p-2 text-slate-600"
             >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -190,7 +207,7 @@ function App() {
                 { id: "philosophy", label: "Philosophy" },
                 { id: "facilities", label: "Facilities" },
                 { id: "admissions", label: "Admissions" },
-                { id: "contact", label: "Contact" }
+                { id: "contact", label: "Contact" },
               ].map((item) => (
                 <button
                   key={item.id}
@@ -215,11 +232,14 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="pt-20 lg:pt-0 min-h-screen flex items-center relative overflow-hidden">
+      <section
+        id="home"
+        className="pt-20 lg:pt-0 min-h-screen flex items-center relative overflow-hidden"
+      >
         {/* Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-amber-50 via-white to-orange-50" />
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-amber-100/30 to-transparent" />
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
@@ -227,17 +247,19 @@ function App() {
                 <Star className="w-4 h-4" />
                 <span>Admissions Open 2026-2027 • Established 1999</span>
               </div>
-              
+
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-800 leading-tight">
                 Kindness at the Core —{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-500">
                   Feathers to Fly
                 </span>
               </h1>
-              
+
               <p className="text-lg text-slate-600 leading-relaxed max-w-xl">
-                At Aviz Convent School, we believe every child is known, valued, and supported as an individual. 
-                We prepare students for real life, not just exams, with 21st-century skills for a global, digital world.
+                At Aviz Convent School, we believe every child is known, valued,
+                and supported as an individual. We prepare students for real
+                life, not just exams, with 21st-century skills for a global,
+                digital world.
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -263,7 +285,7 @@ function App() {
                 </div>
                 <div className="w-px h-12 bg-slate-200" />
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-slate-800">Play-8</div>
+                  <div className="text-3xl font-bold text-slate-800">Pg-8</div>
                   <div className="text-sm text-slate-500">Classes Offered</div>
                 </div>
                 <div className="w-px h-12 bg-slate-200" />
@@ -283,7 +305,7 @@ function App() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>
-              
+
               {/* Floating Card */}
               <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-6 max-w-xs">
                 <div className="flex items-center gap-4">
@@ -291,8 +313,12 @@ function App() {
                     <CheckCircle className="w-6 h-6 text-green-600" />
                   </div>
                   <div>
-                    <p className="font-semibold text-slate-800">Admissions Open</p>
-                    <p className="text-sm text-slate-500">2026-2027 Academic Year</p>
+                    <p className="font-semibold text-slate-800">
+                      Admissions Open
+                    </p>
+                    <p className="text-sm text-slate-500">
+                      2026-2027 Academic Year
+                    </p>
                   </div>
                 </div>
               </div>
@@ -302,7 +328,11 @@ function App() {
       </section>
 
       {/* About Section */}
-      <section id="about" ref={aboutSectionRef} className="py-20 lg:py-28 bg-white">
+      <section
+        id="about"
+        ref={aboutSectionRef}
+        className="py-20 lg:py-28 bg-white"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="inline-block text-amber-600 font-semibold text-sm uppercase tracking-wider mb-4">
@@ -312,8 +342,9 @@ function App() {
               A Trusted Institution Since 1999
             </h2>
             <p className="text-slate-600 text-lg">
-              Aviz Convent School is a well-established, trusted, medium-sized school providing 
-              comprehensive English education with a focus on holistic development.
+              Aviz Convent School is a well-established, trusted, medium-sized
+              school providing comprehensive English education with a focus on
+              holistic development.
             </p>
           </div>
 
@@ -322,33 +353,39 @@ function App() {
               {
                 icon: GraduationCap,
                 title: "UP Board Curriculum",
-                description: "Following UP Board syllabus with English medium instruction for Classes Playgroup to 8."
+                description:
+                  "Following UP Board syllabus with English medium instruction for Classes Playgroup to 8.",
               },
               {
                 icon: Heart,
                 title: "Safe & Nurturing",
-                description: "A safe, disciplined, and nurturing environment where every child feels at home."
+                description:
+                  "A safe, disciplined, and nurturing environment where every child feels at home.",
               },
               {
                 icon: Users,
                 title: "Personal Attention",
-                description: "Medium-sized school ensuring personal attention to every student's needs."
+                description:
+                  "Medium-sized school ensuring personal attention to every student's needs.",
               },
               {
                 icon: Award,
                 title: "Strong Pastoral Care",
-                description: "Dedicated teacher guidance and strong pastoral care for student wellbeing."
+                description:
+                  "Dedicated teacher guidance and strong pastoral care for student wellbeing.",
               },
               {
                 icon: BookOpen,
                 title: "Balanced Education",
-                description: "Equal focus on academics, character building, and overall wellbeing."
+                description:
+                  "Equal focus on academics, character building, and overall wellbeing.",
               },
               {
                 icon: Star,
                 title: "Community Trust",
-                description: "Strong reputation in the local community built over two decades."
-              }
+                description:
+                  "Strong reputation in the local community built over two decades.",
+              },
             ].map((item, index) => (
               <div
                 key={index}
@@ -357,8 +394,12 @@ function App() {
                 <div className="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-amber-500 transition-colors">
                   <item.icon className="w-7 h-7 text-amber-600 group-hover:text-white transition-colors" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-800 mb-3">{item.title}</h3>
-                <p className="text-slate-600 leading-relaxed">{item.description}</p>
+                <h3 className="text-xl font-bold text-slate-800 mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-slate-600 leading-relaxed">
+                  {item.description}
+                </p>
               </div>
             ))}
           </div>
@@ -366,7 +407,10 @@ function App() {
       </section>
 
       {/* Philosophy Section */}
-      <section id="philosophy" className="py-20 lg:py-28 bg-gradient-to-br from-amber-50 to-orange-50">
+      <section
+        id="philosophy"
+        className="py-20 lg:py-28 bg-gradient-to-br from-amber-50 to-orange-50"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="inline-block text-amber-600 font-semibold text-sm uppercase tracking-wider mb-4">
@@ -388,8 +432,12 @@ function App() {
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-slate-800 mb-3">{feature.title}</h3>
-                    <p className="text-slate-600 leading-relaxed">{feature.description}</p>
+                    <h3 className="text-xl font-bold text-slate-800 mb-3">
+                      {feature.title}
+                    </h3>
+                    <p className="text-slate-600 leading-relaxed">
+                      {feature.description}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -410,7 +458,7 @@ function App() {
                 "Confidence Building",
                 "Critical Thinking",
                 "Collaboration",
-                "Creativity"
+                "Creativity",
               ].map((value, index) => (
                 <div
                   key={index}
@@ -437,8 +485,9 @@ function App() {
                 Quality Infrastructure for Quality Education
               </h2>
               <p className="text-slate-600 text-lg mb-8">
-                We provide a conducive learning environment with practical facilities that support 
-                our students' academic and personal growth.
+                We provide a conducive learning environment with practical
+                facilities that support our students' academic and personal
+                growth.
               </p>
 
               <div className="space-y-4">
@@ -450,7 +499,9 @@ function App() {
                     <div className="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0">
                       <CheckCircle className="w-5 h-5 text-amber-600" />
                     </div>
-                    <span className="text-slate-700 font-medium">{facility}</span>
+                    <span className="text-slate-700 font-medium">
+                      {facility}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -514,7 +565,10 @@ function App() {
               >
                 <div className="flex gap-1 mb-6">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
+                    <Star
+                      key={i}
+                      className="w-5 h-5 fill-amber-400 text-amber-400"
+                    />
                   ))}
                 </div>
                 <p className="text-slate-600 mb-6 leading-relaxed italic">
@@ -527,7 +581,9 @@ function App() {
                     </span>
                   </div>
                   <div>
-                    <p className="font-semibold text-slate-800">{testimonial.name}</p>
+                    <p className="font-semibold text-slate-800">
+                      {testimonial.name}
+                    </p>
                     <p className="text-sm text-slate-500">{testimonial.role}</p>
                   </div>
                 </div>
@@ -538,7 +594,10 @@ function App() {
       </section>
 
       {/* Admissions Section */}
-      <section id="admissions" className="py-20 lg:py-28 bg-gradient-to-br from-amber-500 to-orange-500">
+      <section
+        id="admissions"
+        className="py-20 lg:py-28 bg-gradient-to-br from-amber-500 to-orange-500"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="inline-block bg-white/20 text-white font-semibold text-sm uppercase tracking-wider px-4 py-2 rounded-full mb-6">
@@ -548,8 +607,8 @@ function App() {
               Give Your Child the Feathers to Fly
             </h2>
             <p className="text-white/90 text-lg">
-              Admissions are now open for the 2026-2027 academic year. 
-              Join our community and watch your child soar.
+              Admissions are now open for the 2026-2027 academic year. Join our
+              community and watch your child soar.
             </p>
           </div>
 
@@ -563,24 +622,31 @@ function App() {
                 {
                   step: "01",
                   title: "Visit School",
-                  description: "Come and explore our campus. Meet our faculty and see our facilities firsthand."
+                  description:
+                    "Come and explore our campus. Meet our faculty and see our facilities firsthand.",
                 },
                 {
                   step: "02",
                   title: "Meet Faculty",
-                  description: "Have a conversation with our experienced teachers about your child's needs."
+                  description:
+                    "Have a conversation with our experienced teachers about your child's needs.",
                 },
                 {
                   step: "03",
                   title: "Enroll",
-                  description: "Complete the simple enrollment process and secure your child's future."
-                }
+                  description:
+                    "Complete the simple enrollment process and secure your child's future.",
+                },
               ].map((item, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <span className="text-white font-bold text-xl">{item.step}</span>
+                    <span className="text-white font-bold text-xl">
+                      {item.step}
+                    </span>
                   </div>
-                  <h4 className="text-xl font-bold text-slate-800 mb-3">{item.title}</h4>
+                  <h4 className="text-xl font-bold text-slate-800 mb-3">
+                    {item.title}
+                  </h4>
                   <p className="text-slate-600">{item.description}</p>
                 </div>
               ))}
@@ -610,7 +676,8 @@ function App() {
               Visit Us Today
             </h2>
             <p className="text-slate-600 text-lg">
-              We'd love to hear from you. Reach out to us for any queries or to schedule a visit.
+              We'd love to hear from you. Reach out to us for any queries or to
+              schedule a visit.
             </p>
           </div>
 
@@ -618,18 +685,24 @@ function App() {
             {/* Contact Info */}
             <div className="space-y-8">
               <div className="bg-slate-50 rounded-2xl p-8">
-                <h3 className="text-xl font-bold text-slate-800 mb-6">Contact Information</h3>
-                
+                <h3 className="text-xl font-bold text-slate-800 mb-6">
+                  Contact Information
+                </h3>
+
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center flex-shrink-0">
                       <MapPin className="w-6 h-6 text-amber-600" />
                     </div>
                     <div>
-                      <p className="font-semibold text-slate-800 mb-1">Address</p>
+                      <p className="font-semibold text-slate-800 mb-1">
+                        Address
+                      </p>
                       <p className="text-slate-600">
-                        Mozum Nagar, near Vivek Plywood,<br />
-                        near Vikas Dairy, Lucknow,<br />
+                        Mozum Nagar, near Vivek Plywood,
+                        <br />
+                        near Vikas Dairy, Lucknow,
+                        <br />
                         Uttar Pradesh – 226003
                       </p>
                     </div>
@@ -641,7 +714,10 @@ function App() {
                     </div>
                     <div>
                       <p className="font-semibold text-slate-800 mb-1">Phone</p>
-                      <a href="tel:08172948400" className="text-slate-600 hover:text-amber-600 transition-colors">
+                      <a
+                        href="tel:08172948400"
+                        className="text-slate-600 hover:text-amber-600 transition-colors"
+                      >
                         08172948400
                       </a>
                     </div>
@@ -653,7 +729,10 @@ function App() {
                     </div>
                     <div>
                       <p className="font-semibold text-slate-800 mb-1">Email</p>
-                      <a href="mailto:avizimam@gmail.com" className="text-slate-600 hover:text-amber-600 transition-colors">
+                      <a
+                        href="mailto:avizimam@gmail.com"
+                        className="text-slate-600 hover:text-amber-600 transition-colors"
+                      >
                         avizimam@gmail.com
                       </a>
                     </div>
@@ -664,12 +743,22 @@ function App() {
                       <Clock className="w-6 h-6 text-amber-600" />
                     </div>
                     <div>
-                      <p className="font-semibold text-slate-800 mb-1">School Hours</p>
+                      <p className="font-semibold text-slate-800 mb-1">
+                        School Hours
+                      </p>
                       <div className="text-slate-600 text-sm space-y-1">
                         {hours.map((h, i) => (
                           <div key={i} className="flex justify-between gap-8">
                             <span>{h.day}</span>
-                            <span className={h.day === "Sunday" ? "text-amber-600 font-medium" : ""}>{h.time}</span>
+                            <span
+                              className={
+                                h.day === "Sunday"
+                                  ? "text-amber-600 font-medium"
+                                  : ""
+                              }
+                            >
+                              {h.time}
+                            </span>
                           </div>
                         ))}
                       </div>
@@ -725,22 +814,31 @@ function App() {
             <div className="lg:col-span-2">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center overflow-hidden border-2 border-amber-300">
-                  <img src="/public/logo.png" alt="logo.png" />
+                  <img src="/logo.png" alt="logo.png" />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold">Aviz Convent School</h3>
-                  <p className="text-slate-400 text-sm">Comprehensive English Education</p>
+                  <p className="text-slate-400 text-sm">
+                    Comprehensive English Education
+                  </p>
                 </div>
               </div>
               <p className="text-slate-400 leading-relaxed mb-6 max-w-md">
-                Established in 1999, we are committed to providing quality education with kindness at the core. 
-                Every child is known, valued, and supported as an individual.
+                Established in 1999, we are committed to providing quality
+                education with kindness at the core. Every child is known,
+                valued, and supported as an individual.
               </p>
               <div className="flex gap-4">
-                <a href="tel:08172948400" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-amber-500 transition-colors">
+                <a
+                  href="tel:8172948400"
+                  className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-amber-500 transition-colors"
+                >
                   <Phone className="w-5 h-5" />
                 </a>
-                <a href="mailto:avizimam@gmail.com" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-amber-500 transition-colors">
+                <a
+                  href="mailto:avizimam@gmail.com"
+                  className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-amber-500 transition-colors"
+                >
                   <Mail className="w-5 h-5" />
                 </a>
               </div>
@@ -756,7 +854,7 @@ function App() {
                   { id: "philosophy", label: "Our Philosophy" },
                   { id: "facilities", label: "Facilities" },
                   { id: "admissions", label: "Admissions" },
-                  { id: "contact", label: "Contact" }
+                  { id: "contact", label: "Contact" },
                 ].map((link) => (
                   <li key={link.id}>
                     <button
@@ -778,7 +876,11 @@ function App() {
                 {hours.map((h, i) => (
                   <li key={i} className="flex justify-between">
                     <span>{h.day}</span>
-                    <span className={h.day === "Sunday" ? "text-amber-400" : ""}>{h.time}</span>
+                    <span
+                      className={h.day === "Sunday" ? "text-amber-400" : ""}
+                    >
+                      {h.time}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -799,7 +901,7 @@ function App() {
       {/* CTA Popup Modal */}
       {showPopup && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
-          <div 
+          <div
             className="absolute inset-0 bg-black/60 backdrop-blur-sm"
             onClick={() => setShowPopup(false)}
           />
@@ -821,9 +923,7 @@ function App() {
               <p className="text-lg text-amber-600 font-semibold">
                 Give Your Child the Feathers to Fly
               </p>
-              <p className="text-slate-500 mt-2">
-                2026-2027 Academic Year
-              </p>
+              <p className="text-slate-500 mt-2">2026-2027 Academic Year</p>
             </div>
 
             <div className="space-y-4">
@@ -839,7 +939,7 @@ function App() {
               </button>
 
               <a
-                href="tel:08172948400"
+                href="tel:8172948400"
                 className="w-full bg-green-500 text-white py-4 rounded-xl font-bold text-lg hover:bg-green-600 hover:shadow-lg transition-all flex items-center justify-center gap-2"
               >
                 <Phone className="w-5 h-5" />
